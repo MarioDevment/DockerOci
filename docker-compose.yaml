@@ -1,0 +1,12 @@
+version: '2.3'
+services:
+  app:
+    build:
+      context: ${PWD}
+      dockerfile: Dockerfile
+    environment:
+      - DISPLAY_ERRORS=On
+    volumes:
+      - ${PWD}:/var/www/html
+    ports:
+      - 8000:80
